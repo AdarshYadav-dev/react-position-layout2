@@ -1,5 +1,5 @@
 import React from "react";
-import "./PositionDemo.css";
+import "./PositionDemo.less";
 
 const PositionDemo = () => {
   return (

@@ -1,0 +1,62 @@
+// Variables
+@box-size: 85px;
+@wide-box-width: 170px;
+@container-width: 300px;
+@container-height: 200px;
+@box-color: rgb(41, 41, 187);
+@container-color: yellow;
+@bg-color: black;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-container {
+  height: @container-height;
+  width: @container-width;
+  background-color: @container-color;
+  position: relative;
+
+  .box {
+    background-color: @box-color;
+
+    &.first,
+    &.third {
+      height: @box-size;
+      width: @box-size;
+    }
+
+    &.third {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &.secound,
+    &.fourth {
+      height: @box-size;
+      width: @wide-box-width;
+      position: absolute;
+    }
+
+    &.secound {
+      top: 0;
+      right: 0;
+    }
+
+    &.fourth {
+      bottom: 0;
+      right: 0;
+    }
+  }
+}
